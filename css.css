@@ -1,0 +1,277 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #f2f3f7;
+	font-family: 'Nunito Sans', sans-serif;
+	color: #6f6f6f;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+	width: 18 px;
+}
+
+::-webkit-scrollbar-thumb {
+	 border-radius: 10px;
+	 padding: 10px;
+	 box-shadow: 
+	inset -2px -2px 8px rgba(255,255,255,1),
+	inset -2px -2px 12px rgba(255,255,255,0.5),
+	inset 2px 2px 4px rgba(255,255,255,0.1),
+	inset 2px 2px 8px rgba(0,0,0,0.15);
+}
+
+
+/* Loader */ 
+.loader-wrapper {
+	width: 100%;
+	height: 100%;
+	background-color: #f2f3f7;
+	z-index: 9999999999999999999999999999;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation-name: showhide;
+	animation-duration: 6s;
+	visibility: hidden;
+
+}
+.loader-wrapper span {
+	color: #6f6f6f;
+	font-size: 15px;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+}
+@keyframes showhide {
+	0% {
+		visibility: visible;
+	}
+	100% {
+		visibility: hidden;
+	}
+}
+svg {
+	width: 150px;
+	height: 150px;
+	animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+svg circle {
+	width: 150%;
+	height: 550%;
+	padding: 10px;
+	fill: none;
+	stroke-width: 10;
+	stroke: #6f6f6f;
+	transform: translate(5px, 5px);
+	stroke-linecap: round;
+	stroke-dasharray: 440;
+	stroke-dashoffset: 440;
+	animation: animate 6s linear infinite;
+}
+@keyframes animate {
+	0%, 100% {
+		stroke-dashoffset: 440;
+	}
+	50% {
+		stroke-dashoffset: 0;
+	}
+	50.1% {
+		stroke-dashoffset: 880;
+	}
+}
+
+
+/* Website */
+/* .website {
+	animation-name: hideshow;
+	animation-duration: 2s;
+	visibility: visible;
+
+}
+@keyframes hideshow {
+	0% {
+		visibility: hidden;
+		
+	}
+	100% {
+		visibility: visible;
+	}
+} */
+#cat {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%); 
+	transition: 0.5s;
+}
+.social-medias {
+	font-size: 30px;
+	text-align: right;
+	width: 98%;
+	padding-top: 10px;
+}
+
+/* About */
+.aboutTxt {
+	box-shadow:  -2px -2px 8px rgba(255,255,255,1),
+	-2px -2px 12px rgba(255,255,255,0.5),
+	inset 2px 2px 4px rgba(255,255,255,0.1),
+	2px 2px 8px rgba(0,0,0,0.15);
+	outline: none;
+	border-radius: 20px;
+	padding: 20px;
+	width: 40%;
+	position: absolute;
+	left: 10%;
+	top: 115%;
+
+	transition: .5s;
+	padding-bottom: 100px;
+}
+@media screen and (max-width: 1000px) {
+  .aboutTxt {
+    width: 70%;
+  }
+}
+.aboutTxt:hover {
+	transition: 0.5s;
+	transform: scale(1.05);
+}
+#title {
+	position: absolute;
+	top: -20px;
+	width: 300px;
+	left: -25px;
+}
+#text {
+	position: relative;
+	top: 60px;
+	color: #6f6f6f;
+}
+
+.thumbnail img {
+	width: 200px;
+}
+.thumb {
+	position: absolute;
+	left: 60%;
+	top: 110%;
+	transition: 0.5s;
+	display: inline;
+}
+.thumb img:hover {
+	transition: 0.5s;
+	transform: scale(1.05);
+}
+@media screen and (max-width: 1000px) {
+  .thumb {
+    display: none;
+  }
+}
+
+/* Photos */
+.photos  {
+	position: absolute;
+	top: 190%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+	height: 163%;
+	box-shadow:  -2px -2px 8px rgba(255,255,255,1),
+	-2px -2px 12px rgba(255,255,255,0.5),
+	inset 2px 2px 4px rgba(255,255,255,0.1),
+	2px 2px 8px rgba(0,0,0,0.15);
+	border-radius: 20px;
+	padding: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .photos {
+    top: 200%;
+    height: 100%;
+  }
+}
+.photo {
+	width: 300px;
+	position: absolute;
+	top: -30px;
+	left: -20px;
+}
+@media screen and (max-width: 1000px) {
+  .imgs img {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .imgs {
+    width: 100%;
+    position: absolute;
+  }
+}
+.imgs {
+	left: 50%;
+	position: relative;
+	transform: translateX(-50%);
+	top: 80px;
+}
+.imgs img {
+	width: 30%;
+	padding-top: 10px;
+	padding-left: 10px;
+	
+	position: relative;
+	transition: 0.5s ease-in-out;
+}
+.imgs img:hover {
+	transform: scale(1.05);
+	transition: 0.5s ease-in-out;
+}
+.imgs img:active {
+	transition: 0.5s;
+	filter: brightness(110%);
+}
+
+/* Footer */
+.footer {
+	position: absolute;
+	top: 720%;
+	transform: translateY(-700%);
+	box-shadow: 
+	inset -2px -2px 8px rgba(255,255,255,1),
+	inset -2px -2px 12px rgba(255,255,255,0.5),
+	inset 2px 2px 4px rgba(255,255,255,0.1),
+	inset 2px 2px 8px rgba(0,0,0,0.15);
+	width: 100%;
+	height: 45%;
+	border-radius: 20px;
+	padding-top: 15px;
+	font-size: 20px;
+}
+.thecontent {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.social {
+	font-size: 30px;
+}
+@media screen and (max-width: 1000px) {
+  .footer {
+    top: 650%;
+  }
+}
